@@ -1,0 +1,52 @@
+site_name: blackbox-course
+site_url: 'https://geometryprocessing.github.io/blackbox-course/'
+repo_name: 'geometryprocessing/blackbox-course'
+repo_url: 'https://github.com/geometryprocessing/blackbox-course'
+edit_uri: '../https://github.com/geometryprocessing/blackbox-course/edit/docs/docs/'
+site_description: "Blackbox simulations in python"
+# strict: true
+docs_dir: 'doc'
+remote_branch: 'master'
+theme:
+  name: material
+  favicon: 'favicon.ico'
+  logo:
+    icon: ' '
+  palette:
+    primary: 'light black'
+    accent: 'black'
+extra:
+  social:
+    - type: 'github'
+      link: 'https://geometryprocessing.github.io/blackbox-course/'
+markdown_extensions:
+  - codehilite
+  - footnotes
+  - admonition
+  - toc:
+      permalink: true
+  - markdown.extensions.smarty
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      repo_url_shortener: true
+      user: polyfem
+      repo: polyfem
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+extra_javascript:
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+nav:
+  - Home: index.md
