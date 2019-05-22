@@ -5,4 +5,14 @@
      <lastmod>2019-05-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
+    <url>
+     <loc>https://geometryprocessing.github.io/geometric-computing-python/igl/</loc>
+     <lastmod>2019-05-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://geometryprocessing.github.io/geometric-computing-python/polyfem/</loc>
+     <lastmod>2019-05-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
 </urlset>
