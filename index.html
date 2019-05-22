@@ -103,7 +103,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#backbox-simulations" tabindex="1" class="md-skip">
+      <a href="#geometry-computing-with-python" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -291,8 +291,35 @@
                   <a href="https://github.com/geometryprocessing/https:/github.com/geometryprocessing/blackbox-course/edit/docs/docs/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="backbox-simulations">Backbox simulations<a class="headerlink" href="#backbox-simulations" title="Permanent link">&para;</a></h1>
-<p>Blackbox simulations in python</p>
+                <h1 id="geometry-computing-with-python">Geometry Computing with Python<a class="headerlink" href="#geometry-computing-with-python" title="Permanent link">&para;</a></h1>
+<p>This course is based on efficient C++ libraries binded to python.
+The main philosophy is to use <code class="codehilite">NumPy</code> arrays as a common interface, making them highly composable with each-other as well as existing scientific computing packages.</p>
+<p>All libraries are part of <strong>conda forge</strong>. We advise to add <code class="codehilite">conda forge</code> to your conda channels:
+<div class="codehilite"><pre><span></span>conda config --add channels conda-forge
+</pre></div></p>
+<h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
+<p>Many disciplines of computer science have access to high level libraries allowing researchers and engineers to quickly produce prototypes. For instance, in machine learning, one can construct complex, state-of-the-art models which run on the GPU in a few lines of Python.</p>
+<p>In the field of geometric computing, however such high-level libraries are sparse. As a result, writing prototypes in geometry is time consuming and difficult even for advanced users.</p>
+<p>In this course, we present a set of easy-to-use Python packages for applications in geometric computing. We have designed these libraries to have a shallow learning curve, while also enabling programmers to easily accomplish a wide variety of complex tasks. Furthermore, the libraries we present share NumPy arrays as a common interface, making them highly composable with each-other as well as existing scientific computing packages. Finally, our libraries are blazing fast, doing most of the heavy computations in C++ with a minimal constant-overhead interface to Python.</p>
+<p>In the course, we will present a set of real-world examples from geometry processing, physical simulation, and geometric deep learning. Each example is prototypical of a common task in research or industry and is implemented in a few lines of code. By the end of the course, attendees will have exposure to a swiss-army-knife of simple, composable, and high-performance tools for geometric computing.</p>
+<h1 id="libigl">Libigl<a class="headerlink" href="#libigl" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Windows is currently unsupported, we expect to have it soon</p>
+</div>
+<p><strong>Libigl</strong> is a simple python and C++ geometry processing library. We have a wide functionality including construction of sparse discrete differential geometry operators and finite-elements matrices such as the cotangent Laplacian and diagonalized mass matrix, and simple facet and edge-based topology data structures.</p>
+<p>It can be easily install trough conda:
+<div class="codehilite"><pre><span></span>conda install igl
+</pre></div></p>
+<p><a href="https://github.com/geometryprocessing/libigl-python-bindings/blob/master/tutorial/tutorials.ipynb">Jupiter Notebook</a></p>
+<p><a href="https://mybinder.org/v2/gh/geometryprocessing/libigl-python-bindings/master?filepath=tutorial%2Ftutorials.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+<h1 id="polyfempy">Polyfempy<a class="headerlink" href="#polyfempy" title="Permanent link">&para;</a></h1>
+<p><strong>Polyfem</strong> is a polyvalent easy to use C++ finite element library.</p>
+<p>It can be easily install trough conda:
+<div class="codehilite"><pre><span></span>conda install polyfempy
+</pre></div></p>
+<p><a href="https://github.com/polyfem/polyfem.github.io/blob/docs/docs/python_examples.ipynb">Jupiter Notebook</a></p>
+<p><a href="https://mybinder.org/v2/gh/polyfem/polyfem.github.io.git/docs?filepath=docs%2Fpython_examples.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a>.</p>
                 
                   
                 
