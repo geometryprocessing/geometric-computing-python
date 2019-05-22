@@ -1,9 +1,9 @@
-site_name: blackbox-course
-site_url: 'https://geometryprocessing.github.io/blackbox-course/'
-repo_name: 'geometryprocessing/blackbox-course'
-repo_url: 'https://github.com/geometryprocessing/blackbox-course'
-edit_uri: '../https://github.com/geometryprocessing/blackbox-course/edit/docs/docs/'
-site_description: "Blackbox simulations in python"
+site_name: geometric-computing-python
+site_url: 'https://geometryprocessing.github.io/geometric-computing-python/'
+repo_name: 'geometryprocessing/geometric-computing-python'
+repo_url: 'https://github.com/geometryprocessing/geometric-computing-python'
+edit_uri: '../https://github.com/geometryprocessing/geometric-computing-python/edit/docs/docs/'
+site_description: "Geometry Computing with Python"
 # strict: true
 docs_dir: 'doc'
 remote_branch: 'master'
@@ -18,7 +18,7 @@ theme:
 extra:
   social:
     - type: 'github'
-      link: 'https://geometryprocessing.github.io/blackbox-course/'
+      link: 'https://geometryprocessing.github.io/geometric-computing-python/'
 markdown_extensions:
   - codehilite
   - footnotes
