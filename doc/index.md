@@ -13,6 +13,9 @@ Here is the list:
 
  - [igl](igl.md)
  - [polyfem](polyfem.md)
+ - TetWild (coming soon)
+ - ABC dataset CAD Processing (coming soon)
+ - 3D Viewer (coming soon)
 
 
 # Motivation
@@ -25,3 +28,5 @@ In this course, we present a set of easy-to-use Python packages for applications
 In the course, we will present a set of real-world examples from geometry processing, physical simulation, and geometric deep learning. Each example is prototypical of a common task in research or industry and is implemented in a few lines of code. By the end of the course, attendees will have exposure to a swiss-army-knife of simple, composable, and high-performance tools for geometric computing.
 
 
+# Contact
+This course is a group endeavor by Sebastian Koch, Teseo Schneider, Francis Williams, and Daniele Panozzo. Please contact us if you have questions or comments. For troubleshooting, please post an issue on github. We are grateful to the authors of all open source C++ libraries we are using, pybind11, Jupyter, and many others.
