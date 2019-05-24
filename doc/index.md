@@ -1,4 +1,4 @@
-Geometry Computing with Python
+Geometric Computing with Python
 =======
 
 This course is based on efficient C++ libraries binded to python.
@@ -29,4 +29,4 @@ In the course, we will present a set of real-world examples from geometry proces
 
 
 # Contact
-This course is a group endeavor by Sebastian Koch, Teseo Schneider, Francis Williams, and Daniele Panozzo. Please contact us if you have questions or comments. For troubleshooting, please post an issue on github. We are grateful to the authors of all open source C++ libraries we are using, pybind11, Jupyter, and many others.
+This course is a group endeavor by Sebastian Koch, Teseo Schneider, Francis Williams, and Daniele Panozzo. Please contact us if you have questions or comments. For troubleshooting, please post an issue on github. We are grateful to the authors of all open source C++ libraries we are using. In particular,libigl, tetwild, polyfem, pybind11, and Jupyter.
