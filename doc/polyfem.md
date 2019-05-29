@@ -13,7 +13,7 @@ PolyFEM is a simple C++ and Python finite element library. We provide a wide set
  - Neo-Hookean Elasticity
  - Stokes
 
-PolyFEM simplicity lies on the interface: just pick a problem, select some boundary condition, and solve. No need to construct complicated function spaces, or learn a new scripting language: everything is set-up trough a [JSON interface](documentation.md) or trough the [Setting class](polyfempy_doc.md) in python.
+PolyFEM simplicity lies on the interface: just pick a problem, select some boundary condition, and solve. No need to construct complicated function spaces, or learn a new scripting language: everything is set-up trough a [JSON interface](https://polyfem.github.io/documentation/) or trough the [Setting class](https://polyfem.github.io/polyfempy_doc/) in python.
 
 
 For instance, PolyFEM seamlessly integrates quad/hexes and tri/tets of order up to 4, and integrate state-of-the-art techniques such as the adaptive $p$-refinement presented in "Decoupling Simulation Accuracy from Mesh Quality" or the spline and polygonal bases in "Poly-Spline Finite-Element Method".
