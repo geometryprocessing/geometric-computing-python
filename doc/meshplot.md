@@ -11,6 +11,7 @@ It can be easily install trough conda:
 conda install meshplot
 ```
 
-<!-- [Jupyter Notebook](https://github.com/wildmeshing/wildmeshing-python/blob/master/examples/tutorial.ipynb) -->
+[Jupyter Notebook](https://github.com/skoch9/meshplot/blob/master/examples/tutorial.ipynb)
 
-<!-- [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/wildmeshing/wildmeshing-python/master?filepath=examples%2Ftutorial.ipynb) -->
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/skoch9/meshplot/master?filepath=examples%2Ftutorial.ipynb)
+
