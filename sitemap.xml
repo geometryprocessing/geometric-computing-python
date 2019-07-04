@@ -2,17 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://geometryprocessing.github.io/geometric-computing-python/</loc>
-     <lastmod>2019-05-31</lastmod>
+     <lastmod>2019-07-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://geometryprocessing.github.io/geometric-computing-python/meshplot/</loc>
+     <lastmod>2019-07-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://geometryprocessing.github.io/geometric-computing-python/wildmeshing/</loc>
+     <lastmod>2019-07-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://geometryprocessing.github.io/geometric-computing-python/igl/</loc>
-     <lastmod>2019-05-31</lastmod>
+     <lastmod>2019-07-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://geometryprocessing.github.io/geometric-computing-python/polyfem/</loc>
-     <lastmod>2019-05-31</lastmod>
+     <lastmod>2019-07-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
