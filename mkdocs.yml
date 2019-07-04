@@ -50,5 +50,7 @@ extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
 nav:
   - Home: index.md
+  - Meshplot: meshplot.md
+  - Wildmeshing: wildmeshing.md
   - Libigl: igl.md
   - Polyfem: polyfem.md

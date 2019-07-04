@@ -11,11 +11,12 @@ conda config --add channels conda-forge
 
 Here is the list:
 
+ - [3D Viewer](meshplot)
+ - [Wildmeshing](wildmeshing)
  - [igl](igl.md)
  - [polyfem](polyfem.md)
- - TetWild (coming soon)
  - ABC dataset CAD Processing (coming soon)
- - 3D Viewer (coming soon)
+
 
 
 # Motivation
