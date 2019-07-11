@@ -6,6 +6,9 @@ Meshplot
 
 Meshplot is a simple, and fast 2d and 3d mesh viewer based on `pythreejs`.
 
+For more information visit [https://skoch9.github.io/meshplot/](https://skoch9.github.io/meshplot/).
+
+
 It can be easily install trough conda:
 ```bash
 conda install meshplot
