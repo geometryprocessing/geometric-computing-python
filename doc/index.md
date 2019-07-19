@@ -7,7 +7,14 @@ The main philosophy is to use `NumPy` arrays as a common interface, making them 
 All libraries are part of [**conda forge**](https://conda-forge.org/). We advise to add `conda forge` to your conda channels:
 ```bash
 conda config --add channels conda-forge
+
+conda install mehsplot
+conda install igl
+conda install wildmeshing
+conda install polyfempy
 ```
+
+
 
 Here is the list:
 
@@ -30,4 +37,4 @@ In the course, we will present a set of real-world examples from geometry proces
 
 
 # Contact
-This course is a group endeavor by Sebastian Koch, Teseo Schneider, Francis Williams, and Daniele Panozzo. Please contact us if you have questions or comments. For troubleshooting, please post an issue on github. We are grateful to the authors of all open source C++ libraries we are using. In particular, libigl, tetwild, polyfem, pybind11, and Jupyter.
+This course is a group endeavor by Sebastian Koch, Teseo Schneider, Francis Williams, ChengChen Li, and Daniele Panozzo. Please contact us if you have questions or comments. For troubleshooting, please post an issue on github. We are grateful to the authors of all open source C++ libraries we are using. In particular, libigl, tetwild, polyfem, pybind11, and Jupyter.

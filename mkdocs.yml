@@ -46,11 +46,18 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+plugins:
+  - mknotebooks:
+      execute: true
+      preamble: "doc/plot_to_md.py"
+      timeout: -1
 extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
 nav:
   - Home: index.md
   - Meshplot: meshplot.md
-  - Wildmeshing: wildmeshing.md
+  - Wildmeshing:
+    - Intro: wildmeshing.md
+    - Notebook: wildmeshing-notebook.ipynb
   - Libigl: igl.md
   - Polyfem: polyfem.md

@@ -31,4 +31,4 @@ conda install polyfempy
 
 [Jupyter Notebook](https://github.com/polyfem/polyfem.github.io/blob/docs/docs/python_examples.ipynb)
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/polyfem/polyfem.github.io.git/docs?filepath=docs%2Fpython_examples.ipynb).
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/polyfem/polyfem.github.io.git/docs?filepath=docs%2Fpython_examples.ipynb)
