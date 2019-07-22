@@ -3,7 +3,7 @@ channels:
 dependencies:
   - numpy
   - scipy
-  - igl
-  - polyfem
   - meshplot
+  - igl
   - wildmeshing
+  - polyfempy
