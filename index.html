@@ -241,28 +241,16 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="meshplot/" title="Meshplot" class="md-nav__link">
-      Meshplot
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
-    <label class="md-nav__link" for="nav-3">
-      Wildmeshing
+    <label class="md-nav__link" for="nav-2">
+      Libraries
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        Wildmeshing
+      <label class="md-nav__title" for="nav-2">
+        Libraries
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -273,8 +261,8 @@
 
 
   <li class="md-nav__item">
-    <a href="wildmeshing/" title="Intro" class="md-nav__link">
-      Intro
+    <a href="meshplot/" title="Meshplot" class="md-nav__link">
+      Meshplot
     </a>
   </li>
 
@@ -285,8 +273,32 @@
 
 
   <li class="md-nav__item">
-    <a href="wildmeshing-notebook/" title="Notebook" class="md-nav__link">
-      Notebook
+    <a href="wildmeshing/" title="Wildmeshing" class="md-nav__link">
+      Wildmeshing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="igl/" title="Libigl" class="md-nav__link">
+      Libigl
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="polyfem/" title="Polyfem" class="md-nav__link">
+      Polyfem
     </a>
   </li>
 
@@ -301,22 +313,34 @@
       
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Material
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Material
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="igl/" title="Libigl" class="md-nav__link">
-      Libigl
+    <a href="Polyfem-2d/" title="Polyfem 2D example" class="md-nav__link">
+      Polyfem 2D example
     </a>
   </li>
 
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="polyfem/" title="Polyfem" class="md-nav__link">
-      Polyfem
-    </a>
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -355,19 +379,28 @@
 The main philosophy is to use <code class="codehilite">NumPy</code> arrays as a common interface, making them highly composable with each-other as well as existing scientific computing packages.</p>
 <p>All libraries are part of <a href="https://conda-forge.org/"><strong>conda forge</strong></a>. We advise to add <code class="codehilite">conda forge</code> to your conda channels:
 <div class="codehilite"><pre><span></span>conda config --add channels conda-forge
-
-conda install mehsplot
+</pre></div></p>
+<p>Then just install them
+<div class="codehilite"><pre><span></span>conda install mehsplot
 conda install igl
 conda install wildmeshing
 conda install polyfempy
 </pre></div></p>
-<p>Here is the list:</p>
+<p>Here you can find more details and examples of the libraries:</p>
 <ul>
 <li><a href="meshplot">3D Viewer</a></li>
 <li><a href="wildmeshing">Wildmeshing</a></li>
 <li><a href="igl/">igl</a></li>
 <li><a href="polyfem/">polyfem</a></li>
 <li>ABC dataset CAD Processing (coming soon)</li>
+</ul>
+<p>And here the final notebooks and slides used in our presentation:</p>
+<ul>
+<li>Introduction</li>
+<li>Visualization, CAD Processing, and Machine Learning</li>
+<li><a href="Polyfem-2d">Meshing and Simulation</a> <a href="https://mybinder.org/v2/gh/geometryprocessing/geometric-computing-python/doc?filepath=doc%2FPolyfem-2d.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></li>
+<li>All together</li>
+<li>Closing remarks</li>
 </ul>
 <h1 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">&para;</a></h1>
 <p>Many disciplines of computer science have access to high level libraries allowing researchers and engineers to quickly produce prototypes. For instance, in machine learning, one can construct complex, state-of-the-art models which run on the GPU in a few lines of Python.</p>
