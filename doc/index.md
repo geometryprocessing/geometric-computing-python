@@ -7,7 +7,11 @@ The main philosophy is to use `NumPy` arrays as a common interface, making them 
 All libraries are part of [**conda forge**](https://conda-forge.org/). We advise to add `conda forge` to your conda channels:
 ```bash
 conda config --add channels conda-forge
+```
 
+
+Then just install them
+```bash
 conda install mehsplot
 conda install igl
 conda install wildmeshing
@@ -15,15 +19,22 @@ conda install polyfempy
 ```
 
 
+Here you can find more details and examples of the libraries:
 
-Here is the list:
+- [3D Viewer](meshplot)
+- [Wildmeshing](wildmeshing)
+- [igl](igl.md)
+- [polyfem](polyfem.md)
+- ABC dataset CAD Processing (coming soon)
 
- - [3D Viewer](meshplot)
- - [Wildmeshing](wildmeshing)
- - [igl](igl.md)
- - [polyfem](polyfem.md)
- - ABC dataset CAD Processing (coming soon)
 
+And here the final notebooks and slides used in our presentation:
+
+- Introduction
+- Visualization, CAD Processing, and Machine Learning
+- [Meshing and Simulation](Polyfem-2d)
+- All together
+- Closing remarks
 
 
 # Motivation
