@@ -12,6 +12,10 @@ It can be easily install trough conda:
 conda install igl
 ```
 
+
+For more information visit [https://geometryprocessing.github.io/libigl-python-bindings/](https://geometryprocessing.github.io/libigl-python-bindings/) or the [C++ website](https://libigl.github.io/).
+
+
 [Jupyter Notebook](https://github.com/geometryprocessing/libigl-python-bindings/blob/master/tutorial/tutorials.ipynb)
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/geometryprocessing/libigl-python-bindings/master?filepath=tutorial%2Ftutorials.ipynb)
