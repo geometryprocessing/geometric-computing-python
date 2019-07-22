@@ -33,7 +33,7 @@ And here the final notebooks and slides used in our presentation:
 - Introduction
 - Visualization, CAD Processing, and Machine Learning
 - [Meshing and Simulation](Polyfem-2d) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/geometryprocessing/geometric-computing-python/doc?filepath=doc%2FPolyfem-2d.ipynb)
-- [All together](All)
+- [All together](All) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/geometryprocessing/geometric-computing-python/doc?filepath=doc%2FAll.ipynb)
 - Closing remarks
 
 
