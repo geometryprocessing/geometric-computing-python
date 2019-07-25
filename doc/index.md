@@ -12,7 +12,7 @@ conda config --add channels conda-forge
 
 Then just install them
 ```bash
-conda install mehsplot
+conda install meshplot
 conda install igl
 conda install wildmeshing
 conda install polyfempy
@@ -48,4 +48,4 @@ In the course, we will present a set of real-world examples from geometry proces
 
 
 # Contact
-This course is a group endeavor by Sebastian Koch, Teseo Schneider, Francis Williams, ChengChen Li, and Daniele Panozzo. Please contact us if you have questions or comments. For troubleshooting, please post an issue on github. We are grateful to the authors of all open source C++ libraries we are using. In particular, libigl, tetwild, polyfem, pybind11, and Jupyter.
+This course is a group endeavor by Sebastian Koch, Teseo Schneider, Francis Williams, Chengchen Li, and Daniele Panozzo. Please contact us if you have questions or comments. For troubleshooting, please post an issue on github. We are grateful to the authors of all open source C++ libraries we are using. In particular, libigl, tetwild, polyfem, pybind11, and Jupyter.

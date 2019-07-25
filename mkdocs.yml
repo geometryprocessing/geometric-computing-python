@@ -62,4 +62,4 @@ nav:
     - Polyfem: polyfem.md
   - Material:
     - Polyfem 2D example: Polyfem-2d.ipynb
-    - igl, MeshCAD, Polyfem 3D example: All.ipynb
+    - All together: All.ipynb
