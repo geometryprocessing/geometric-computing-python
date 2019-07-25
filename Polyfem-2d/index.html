@@ -1,4 +1,4 @@
-<!doctype html><html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="description" content="Geometry Computing with Python"><link rel="canonical" href="https://geometryprocessing.github.io/geometric-computing-python/Polyfem-2d/"><meta name="lang:clipboard.copy" content="Copy to clipboard"><meta name="lang:clipboard.copied" content="Copied to clipboard"><meta name="lang:search.language" content="en"><meta name="lang:search.pipeline.stopwords" content="True"><meta name="lang:search.pipeline.trimmer" content="True"><meta name="lang:search.result.none" content="No matching documents"><meta name="lang:search.result.one" content="1 matching document"><meta name="lang:search.result.other" content="# matching documents"><meta name="lang:search.tokenizer" content="[\s\-]+"><link rel="shortcut icon" href="../favicon.ico"><meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.3.0"><title>Polyfem 2D example - Geometric Computing with Python</title><link rel="stylesheet" href="../assets/stylesheets/application.4031d38b.css"><link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css"><meta name="theme-color" content=""><script src="../assets/javascripts/modernizr.74668098.js"></script><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=swap"><style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style><link rel="stylesheet" href="../assets/fonts/material-icons.css"></head><body dir="ltr" data-md-color-primary="light-black" data-md-color-accent="black"><svg class="md-svg"><defs><svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg></defs></svg> <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off"> <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off"> <label class="md-overlay" data-md-component="overlay" for="__drawer"></label><a href="#imports" tabindex="1" class="md-skip">Skip to content </a><header class="md-header" data-md-component="header"><nav class="md-header-nav md-grid"><div class="md-flex"><div class="md-flex__cell md-flex__cell--shrink"><a href="https://geometryprocessing.github.io/geometric-computing-python/" title="Geometric Computing with Python" class="md-header-nav__button md-logo"><i class="md-icon"> </i></a></div><div class="md-flex__cell md-flex__cell--shrink"><label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label></div><div class="md-flex__cell md-flex__cell--stretch"><div class="md-flex__ellipsis md-header-nav__title" data-md-component="title"><span class="md-header-nav__topic">Geometric Computing with Python</span><span class="md-header-nav__topic">Polyfem 2D example</span></div></div><div class="md-flex__cell md-flex__cell--shrink"></div><div class="md-flex__cell md-flex__cell--shrink"><div class="md-header-nav__source"><a href="https://github.com/geometryprocessing/geometric-computing-python/" title="Go to repository" class="md-source" data-md-source="github"><div class="md-source__icon"><svg viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#__github" width="24" height="24"></use></svg></div><div class="md-source__repository">geometryprocessing/geometric-computing-python</div></a></div></div></div></nav></header><div class="md-container"><main class="md-main"><div class="md-main__inner md-grid" data-md-component="container"><div class="md-sidebar md-sidebar--primary" data-md-component="navigation"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--primary" data-md-level="0"><label class="md-nav__title md-nav__title--site" for="__drawer"><a href="https://geometryprocessing.github.io/geometric-computing-python/" title="Geometric Computing with Python" class="md-nav__button md-logo"><i class="md-icon"> </i></a>Geometric Computing with Python</label><div class="md-nav__source"><a href="https://github.com/geometryprocessing/geometric-computing-python/" title="Go to repository" class="md-source" data-md-source="github"><div class="md-source__icon"><svg viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#__github" width="24" height="24"></use></svg></div><div class="md-source__repository">geometryprocessing/geometric-computing-python</div></a></div><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href=".." title="Home" class="md-nav__link">Home</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2"><label class="md-nav__link" for="nav-2">Libraries</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-2">Libraries</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../meshplot/" title="Meshplot" class="md-nav__link">Meshplot</a></li><li class="md-nav__item"><a href="../wildmeshing/" title="Wildmeshing" class="md-nav__link">Wildmeshing</a></li><li class="md-nav__item"><a href="../igl/" title="Libigl" class="md-nav__link">Libigl</a></li><li class="md-nav__item"><a href="../polyfem/" title="Polyfem" class="md-nav__link">Polyfem</a></li></ul></nav></li><li class="md-nav__item md-nav__item--active md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked><label class="md-nav__link" for="nav-3">Material</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-3">Material</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item md-nav__item--active"><input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc"><label class="md-nav__link md-nav__link--active" for="__toc">Polyfem 2D example</label><a href="./" title="Polyfem 2D example" class="md-nav__link md-nav__link--active">Polyfem 2D example</a><nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">Table of contents</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#imports" title="Imports" class="md-nav__link">Imports</a></li><li class="md-nav__item"><a href="#load-data" title="Load Data" class="md-nav__link">Load Data</a></li><li class="md-nav__item"><a href="#meshing" title="Meshing" class="md-nav__link">Meshing</a></li><li class="md-nav__item"><a href="#sidesets-for-boundary-conditions" title="Sidesets for Boundary Conditions" class="md-nav__link">Sidesets for Boundary Conditions</a></li><li class="md-nav__item"><a href="#problem-and-settings-setup" title="Problem and Settings Setup" class="md-nav__link">Problem and Settings Setup</a></li><li class="md-nav__item"><a href="#solving" title="Solving!" class="md-nav__link">Solving!</a></li><li class="md-nav__item"><a href="#results" title="Results" class="md-nav__link">Results</a></li></ul></nav></li><li class="md-nav__item"><a href="../All/" title="igl, MeshCAD, Polyfem 3D example" class="md-nav__link">igl, MeshCAD, Polyfem 3D example</a></li></ul></nav></li></ul></nav></div></div></div><div class="md-sidebar md-sidebar--secondary" data-md-component="toc"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">Table of contents</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#imports" title="Imports" class="md-nav__link">Imports</a></li><li class="md-nav__item"><a href="#load-data" title="Load Data" class="md-nav__link">Load Data</a></li><li class="md-nav__item"><a href="#meshing" title="Meshing" class="md-nav__link">Meshing</a></li><li class="md-nav__item"><a href="#sidesets-for-boundary-conditions" title="Sidesets for Boundary Conditions" class="md-nav__link">Sidesets for Boundary Conditions</a></li><li class="md-nav__item"><a href="#problem-and-settings-setup" title="Problem and Settings Setup" class="md-nav__link">Problem and Settings Setup</a></li><li class="md-nav__item"><a href="#solving" title="Solving!" class="md-nav__link">Solving!</a></li><li class="md-nav__item"><a href="#results" title="Results" class="md-nav__link">Results</a></li></ul></nav></div></div></div><div class="md-content"><article class="md-content__inner md-typeset"><a href="https://github.com/geometryprocessing/https:/github.com/geometryprocessing/geometric-computing-python/edit/docs/docs/Polyfem-2d.ipynb" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a><h1>Polyfem 2D example</h1><h2 id="imports">Imports<a class="headerlink" href="#imports" title="Permanent link">&para;</a></h2>
+<!doctype html><html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="description" content="Geometry Computing with Python"><link rel="canonical" href="https://geometryprocessing.github.io/geometric-computing-python/Polyfem-2d/"><meta name="lang:clipboard.copy" content="Copy to clipboard"><meta name="lang:clipboard.copied" content="Copied to clipboard"><meta name="lang:search.language" content="en"><meta name="lang:search.pipeline.stopwords" content="True"><meta name="lang:search.pipeline.trimmer" content="True"><meta name="lang:search.result.none" content="No matching documents"><meta name="lang:search.result.one" content="1 matching document"><meta name="lang:search.result.other" content="# matching documents"><meta name="lang:search.tokenizer" content="[\s\-]+"><link rel="shortcut icon" href="../favicon.ico"><meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.3.0"><title>Polyfem 2D example - Geometric Computing with Python</title><link rel="stylesheet" href="../assets/stylesheets/application.4031d38b.css"><link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css"><meta name="theme-color" content=""><script src="../assets/javascripts/modernizr.74668098.js"></script><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=swap"><style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style><link rel="stylesheet" href="../assets/fonts/material-icons.css"></head><body dir="ltr" data-md-color-primary="light-black" data-md-color-accent="black"><svg class="md-svg"><defs><svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg></defs></svg> <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off"> <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off"> <label class="md-overlay" data-md-component="overlay" for="__drawer"></label><a href="#imports" tabindex="1" class="md-skip">Skip to content </a><header class="md-header" data-md-component="header"><nav class="md-header-nav md-grid"><div class="md-flex"><div class="md-flex__cell md-flex__cell--shrink"><a href="https://geometryprocessing.github.io/geometric-computing-python/" title="Geometric Computing with Python" class="md-header-nav__button md-logo"><i class="md-icon"> </i></a></div><div class="md-flex__cell md-flex__cell--shrink"><label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label></div><div class="md-flex__cell md-flex__cell--stretch"><div class="md-flex__ellipsis md-header-nav__title" data-md-component="title"><span class="md-header-nav__topic">Geometric Computing with Python</span><span class="md-header-nav__topic">Polyfem 2D example</span></div></div><div class="md-flex__cell md-flex__cell--shrink"></div><div class="md-flex__cell md-flex__cell--shrink"><div class="md-header-nav__source"><a href="https://github.com/geometryprocessing/geometric-computing-python/" title="Go to repository" class="md-source" data-md-source="github"><div class="md-source__icon"><svg viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#__github" width="24" height="24"></use></svg></div><div class="md-source__repository">geometryprocessing/geometric-computing-python</div></a></div></div></div></nav></header><div class="md-container"><main class="md-main"><div class="md-main__inner md-grid" data-md-component="container"><div class="md-sidebar md-sidebar--primary" data-md-component="navigation"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--primary" data-md-level="0"><label class="md-nav__title md-nav__title--site" for="__drawer"><a href="https://geometryprocessing.github.io/geometric-computing-python/" title="Geometric Computing with Python" class="md-nav__button md-logo"><i class="md-icon"> </i></a>Geometric Computing with Python</label><div class="md-nav__source"><a href="https://github.com/geometryprocessing/geometric-computing-python/" title="Go to repository" class="md-source" data-md-source="github"><div class="md-source__icon"><svg viewBox="0 0 24 24" width="24" height="24"><use xlink:href="#__github" width="24" height="24"></use></svg></div><div class="md-source__repository">geometryprocessing/geometric-computing-python</div></a></div><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href=".." title="Home" class="md-nav__link">Home</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2"><label class="md-nav__link" for="nav-2">Libraries</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-2">Libraries</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../meshplot/" title="Meshplot" class="md-nav__link">Meshplot</a></li><li class="md-nav__item"><a href="../wildmeshing/" title="Wildmeshing" class="md-nav__link">Wildmeshing</a></li><li class="md-nav__item"><a href="../igl/" title="Libigl" class="md-nav__link">Libigl</a></li><li class="md-nav__item"><a href="../polyfem/" title="Polyfem" class="md-nav__link">Polyfem</a></li></ul></nav></li><li class="md-nav__item md-nav__item--active md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked><label class="md-nav__link" for="nav-3">Material</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-3">Material</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item md-nav__item--active"><input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc"><label class="md-nav__link md-nav__link--active" for="__toc">Polyfem 2D example</label><a href="./" title="Polyfem 2D example" class="md-nav__link md-nav__link--active">Polyfem 2D example</a><nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">Table of contents</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#imports" title="Imports" class="md-nav__link">Imports</a></li><li class="md-nav__item"><a href="#load-data" title="Load Data" class="md-nav__link">Load Data</a></li><li class="md-nav__item"><a href="#meshing" title="Meshing" class="md-nav__link">Meshing</a></li><li class="md-nav__item"><a href="#sidesets-for-boundary-conditions" title="Sidesets for Boundary Conditions" class="md-nav__link">Sidesets for Boundary Conditions</a></li><li class="md-nav__item"><a href="#problem-and-settings-setup" title="Problem and Settings Setup" class="md-nav__link">Problem and Settings Setup</a></li><li class="md-nav__item"><a href="#solving" title="Solving!" class="md-nav__link">Solving!</a></li><li class="md-nav__item"><a href="#results" title="Results" class="md-nav__link">Results</a></li></ul></nav></li><li class="md-nav__item"><a href="../All/" title="All together" class="md-nav__link">All together</a></li></ul></nav></li></ul></nav></div></div></div><div class="md-sidebar md-sidebar--secondary" data-md-component="toc"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">Table of contents</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#imports" title="Imports" class="md-nav__link">Imports</a></li><li class="md-nav__item"><a href="#load-data" title="Load Data" class="md-nav__link">Load Data</a></li><li class="md-nav__item"><a href="#meshing" title="Meshing" class="md-nav__link">Meshing</a></li><li class="md-nav__item"><a href="#sidesets-for-boundary-conditions" title="Sidesets for Boundary Conditions" class="md-nav__link">Sidesets for Boundary Conditions</a></li><li class="md-nav__item"><a href="#problem-and-settings-setup" title="Problem and Settings Setup" class="md-nav__link">Problem and Settings Setup</a></li><li class="md-nav__item"><a href="#solving" title="Solving!" class="md-nav__link">Solving!</a></li><li class="md-nav__item"><a href="#results" title="Results" class="md-nav__link">Results</a></li></ul></nav></div></div></div><div class="md-content"><article class="md-content__inner md-typeset"><a href="https://github.com/geometryprocessing/https:/github.com/geometryprocessing/geometric-computing-python/edit/docs/docs/Polyfem-2d.ipynb" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a><h1>Polyfem 2D example</h1><h2 id="imports">Imports<a class="headerlink" href="#imports" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">meshplot</span> <span class="kn">as</span> <span class="nn">mp</span>
 
@@ -27,7 +27,7 @@
   "version_major": 2,
   "version_minor": 0,
   "state": {
-    "5bb5437949254dc9847368ee25975157": {
+    "2e001ec8dab94254919c3b3a7be0288c": {
       "model_name": "RendererModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -36,23 +36,23 @@
         "_dom_classes": [],
         "_height": 600,
         "_width": 600,
-        "camera": "IPY_MODEL_1bcb638120bb43a08a9c308797de706d",
+        "camera": "IPY_MODEL_eed065b068d64cb6af6cdfa364b56d54",
         "clippingPlanes": [],
         "controls": [
-          "IPY_MODEL_039ce2bc517844fb94a40d852cfb1390"
+          "IPY_MODEL_7300cb4361ee477f81a5bd9c776fc629"
         ],
-        "layout": "IPY_MODEL_0fd027c88b3c4f829e322a49d53a43a7",
-        "scene": "IPY_MODEL_681fdf73541d4feb8f780773b79c989d",
-        "shadowMap": "IPY_MODEL_0aa152cb83fe43ddb1b6f70e9a4cbdd5"
+        "layout": "IPY_MODEL_9a587f353f324061959924d182ddbd6b",
+        "scene": "IPY_MODEL_1f3e5f0db54544488f72f445a34097eb",
+        "shadowMap": "IPY_MODEL_ef8bd30b361449cfb515549930b41b22"
       }
     },
-    "1bcb638120bb43a08a9c308797de706d": {
+    "eed065b068d64cb6af6cdfa364b56d54": {
       "model_name": "PerspectiveCameraModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "children": [
-          "IPY_MODEL_0bdd8cef88f946638d402e2867e51011"
+          "IPY_MODEL_58ea045f1d264e0580eaa25dc993d510"
         ],
         "fov": 30.0,
         "position": [
@@ -78,7 +78,7 @@
         ]
       }
     },
-    "0bdd8cef88f946638d402e2867e51011": {
+    "58ea045f1d264e0580eaa25dc993d510": {
       "model_name": "DirectionalLightModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -111,12 +111,12 @@
         ]
       }
     },
-    "039ce2bc517844fb94a40d852cfb1390": {
+    "7300cb4361ee477f81a5bd9c776fc629": {
       "model_name": "OrbitControlsModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
-        "controlling": "IPY_MODEL_1bcb638120bb43a08a9c308797de706d",
+        "controlling": "IPY_MODEL_eed065b068d64cb6af6cdfa364b56d54",
         "target": [
           194.3000030517578,
           188.8000030517578,
@@ -128,23 +128,23 @@
         "minAzimuthAngle": "-inf"
       }
     },
-    "0fd027c88b3c4f829e322a49d53a43a7": {
+    "9a587f353f324061959924d182ddbd6b": {
       "model_name": "LayoutModel",
       "model_module": "@jupyter-widgets/base",
       "model_module_version": "1.2.0",
       "state": {}
     },
-    "681fdf73541d4feb8f780773b79c989d": {
+    "1f3e5f0db54544488f72f445a34097eb": {
       "model_name": "SceneModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "children": [
-          "IPY_MODEL_1bcb638120bb43a08a9c308797de706d",
-          "IPY_MODEL_7931e0c1c25c45fea5e73ad2d818644d",
-          "IPY_MODEL_b952ba63d6d94d779c61b5792f9c422c",
-          "IPY_MODEL_60a476d5ad364091a52a265f452fb1aa",
-          "IPY_MODEL_66d9e6dfe46d47be89d21dada68cc6a8"
+          "IPY_MODEL_eed065b068d64cb6af6cdfa364b56d54",
+          "IPY_MODEL_2da13c9e15f34f1988616d3ea665f371",
+          "IPY_MODEL_c5057cf14fca417b886fc99174213d89",
+          "IPY_MODEL_6cd30e6642834314ba4ec71982accacf",
+          "IPY_MODEL_4a61f1a4e15c49c3a4a48356f3206c39"
         ],
         "fog": null,
         "overrideMaterial": null,
@@ -166,7 +166,7 @@
         ]
       }
     },
-    "7931e0c1c25c45fea5e73ad2d818644d": {
+    "2da13c9e15f34f1988616d3ea665f371": {
       "model_name": "AmbientLightModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -191,16 +191,16 @@
         ]
       }
     },
-    "b952ba63d6d94d779c61b5792f9c422c": {
+    "c5057cf14fca417b886fc99174213d89": {
       "model_name": "MeshModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "children": [
-          "IPY_MODEL_dc4d18383a8f4e79a0c6d4f5d312c9ac"
+          "IPY_MODEL_cf8a11e7ee3e43839232247cf2d85007"
         ],
-        "geometry": "IPY_MODEL_edb0e237734346f7923f78203d26da4b",
-        "material": "IPY_MODEL_dbec1b5ec4474faa93779c3f23ad36fc",
+        "geometry": "IPY_MODEL_05d565d88b074506b925d8e49178a497",
+        "material": "IPY_MODEL_762d5ef79a7b4c27bb732383f8723b2e",
         "morphTargetInfluences": [],
         "quaternion": [
           0.0,
@@ -220,14 +220,14 @@
         ]
       }
     },
-    "dc4d18383a8f4e79a0c6d4f5d312c9ac": {
+    "cf8a11e7ee3e43839232247cf2d85007": {
       "model_name": "LineSegmentsModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "children": [],
-        "geometry": "IPY_MODEL_2db148e18fc14eb1be145fa7db384964",
-        "material": "IPY_MODEL_1e7c3c9481cb4b23abb19d6737323cd2",
+        "geometry": "IPY_MODEL_95817273a4d547a685e6eccb8d0cce32",
+        "material": "IPY_MODEL_8410041d9f784f38bdc9eab089aa35a2",
         "quaternion": [
           0.0,
           0.0,
@@ -246,31 +246,31 @@
         ]
       }
     },
-    "2db148e18fc14eb1be145fa7db384964": {
+    "95817273a4d547a685e6eccb8d0cce32": {
       "model_name": "WireframeGeometryModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
-        "geometry": "IPY_MODEL_edb0e237734346f7923f78203d26da4b"
+        "geometry": "IPY_MODEL_05d565d88b074506b925d8e49178a497"
       }
     },
-    "edb0e237734346f7923f78203d26da4b": {
+    "05d565d88b074506b925d8e49178a497": {
       "model_name": "BufferGeometryModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "_ref_geometry": null,
         "attributes": {
-          "color": "IPY_MODEL_912d9d1f7c7f424790afac58ef9b3119",
-          "index": "IPY_MODEL_12dd65e1cf8d401ab53572cc3c3c1347",
-          "position": "IPY_MODEL_44350b3a9d834101a99259c57cdd1494"
+          "color": "IPY_MODEL_0f98f25043d04f6c8dce72f164c9d502",
+          "index": "IPY_MODEL_f3f7999e441e4bd882f786da6dcab644",
+          "position": "IPY_MODEL_13d916c665c74b38b012d7183de1f114"
         },
         "index": null,
         "morphAttributes": {},
         "userData": {}
       }
     },
-    "912d9d1f7c7f424790afac58ef9b3119": {
+    "0f98f25043d04f6c8dce72f164c9d502": {
       "model_name": "BufferAttributeModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -295,7 +295,7 @@
         }
       ]
     },
-    "12dd65e1cf8d401ab53572cc3c3c1347": {
+    "f3f7999e441e4bd882f786da6dcab644": {
       "model_name": "BufferAttributeModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -318,7 +318,7 @@
         }
       ]
     },
-    "44350b3a9d834101a99259c57cdd1494": {
+    "13d916c665c74b38b012d7183de1f114": {
       "model_name": "BufferAttributeModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -342,7 +342,7 @@
         }
       ]
     },
-    "1e7c3c9481cb4b23abb19d6737323cd2": {
+    "8410041d9f784f38bdc9eab089aa35a2": {
       "model_name": "LineBasicMaterialModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -353,7 +353,7 @@
         "linewidth": 0.03
       }
     },
-    "dbec1b5ec4474faa93779c3f23ad36fc": {
+    "762d5ef79a7b4c27bb732383f8723b2e": {
       "model_name": "MeshStandardMaterialModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -386,14 +386,14 @@
         "vertexColors": "VertexColors"
       }
     },
-    "60a476d5ad364091a52a265f452fb1aa": {
+    "6cd30e6642834314ba4ec71982accacf": {
       "model_name": "LineSegmentsModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "children": [],
-        "geometry": "IPY_MODEL_823ba7e0ee7e49a4927e91221c7d2f8b",
-        "material": "IPY_MODEL_0fdb599091ed4872951ae9c0834913cb",
+        "geometry": "IPY_MODEL_a100081b66e248e4bb6b125782f43cbc",
+        "material": "IPY_MODEL_7d613bda1706423fb5abe3f5906cbe17",
         "quaternion": [
           0.0,
           0.0,
@@ -412,21 +412,21 @@
         ]
       }
     },
-    "823ba7e0ee7e49a4927e91221c7d2f8b": {
+    "a100081b66e248e4bb6b125782f43cbc": {
       "model_name": "BufferGeometryModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "_ref_geometry": null,
         "attributes": {
-          "position": "IPY_MODEL_61fb423c5a854bb5b6c4e2c3705ea746"
+          "position": "IPY_MODEL_f1dd9ec6e582485cbb92be397e55194b"
         },
         "index": null,
         "morphAttributes": {},
         "userData": {}
       }
     },
-    "61fb423c5a854bb5b6c4e2c3705ea746": {
+    "f1dd9ec6e582485cbb92be397e55194b": {
       "model_name": "BufferAttributeModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -450,7 +450,7 @@
         }
       ]
     },
-    "0fdb599091ed4872951ae9c0834913cb": {
+    "7d613bda1706423fb5abe3f5906cbe17": {
       "model_name": "LineBasicMaterialModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -460,14 +460,14 @@
         "defines": null
       }
     },
-    "66d9e6dfe46d47be89d21dada68cc6a8": {
+    "4a61f1a4e15c49c3a4a48356f3206c39": {
       "model_name": "PointsModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "children": [],
-        "geometry": "IPY_MODEL_8cfa6d8c27a544d5b0c2b8bdbafbdf9a",
-        "material": "IPY_MODEL_b4408bd1bc9b4fe2a71644e8bfb9a552",
+        "geometry": "IPY_MODEL_46eb4246893443e880fb91416adf7be8",
+        "material": "IPY_MODEL_67475fbbf5644a18b3fea30d4f2380e4",
         "quaternion": [
           0.0,
           0.0,
@@ -486,21 +486,21 @@
         ]
       }
     },
-    "8cfa6d8c27a544d5b0c2b8bdbafbdf9a": {
+    "46eb4246893443e880fb91416adf7be8": {
       "model_name": "BufferGeometryModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "_ref_geometry": null,
         "attributes": {
-          "position": "IPY_MODEL_4495e89f1238481dac91d4b7e77db62e"
+          "position": "IPY_MODEL_7ab1b8c0ac6d45de86d92d8bdd764d2b"
         },
         "index": null,
         "morphAttributes": {},
         "userData": {}
       }
     },
-    "4495e89f1238481dac91d4b7e77db62e": {
+    "7ab1b8c0ac6d45de86d92d8bdd764d2b": {
       "model_name": "BufferAttributeModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -524,7 +524,7 @@
         }
       ]
     },
-    "b4408bd1bc9b4fe2a71644e8bfb9a552": {
+    "67475fbbf5644a18b3fea30d4f2380e4": {
       "model_name": "PointsMaterialModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -536,7 +536,7 @@
         "size": 5.0
       }
     },
-    "0aa152cb83fe43ddb1b6f70e9a4cbdd5": {
+    "ef8bd30b361449cfb515549930b41b22": {
       "model_name": "WebGLShadowMapModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -547,7 +547,7 @@
 </script>
 
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "5bb5437949254dc9847368ee25975157"}
+{"version_major": 2, "version_minor": 0, "model_id": "2e001ec8dab94254919c3b3a7be0288c"}
 </script>
 
 <h2 id="meshing">Meshing<a class="headerlink" href="#meshing" title="Permanent link">&para;</a></h2>
@@ -569,7 +569,7 @@
   "version_major": 2,
   "version_minor": 0,
   "state": {
-    "2cd7b78a24d14c74aa7b63d29f4f0b1a": {
+    "25e4d86fcdd2402bb2cd58d9f902865d": {
       "model_name": "RendererModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -578,23 +578,23 @@
         "_dom_classes": [],
         "_height": 600,
         "_width": 600,
-        "camera": "IPY_MODEL_289e2f6a2a654e578f6859780dc8647e",
+        "camera": "IPY_MODEL_2f181a5aa1dc42b0a3eaec853d111a25",
         "clippingPlanes": [],
         "controls": [
-          "IPY_MODEL_a79a31a635c34b1f857bea0f387ac928"
+          "IPY_MODEL_6ce3dc38024843c28902a89c35f5a27c"
         ],
-        "layout": "IPY_MODEL_a4dc07cb14674e7a94335311172f805d",
-        "scene": "IPY_MODEL_bc0e95073f514bceab7e4f346a7f5589",
-        "shadowMap": "IPY_MODEL_596e2a2209cc42a8a256fcaa4ac9a465"
+        "layout": "IPY_MODEL_d99c790b33e4432ab5f2b10f3775bc98",
+        "scene": "IPY_MODEL_a96bf662b4bd426788dcd04f75a94d0b",
+        "shadowMap": "IPY_MODEL_e66445f4d58f488a85e7008bfdff1de6"
       }
     },
-    "289e2f6a2a654e578f6859780dc8647e": {
+    "2f181a5aa1dc42b0a3eaec853d111a25": {
       "model_name": "PerspectiveCameraModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "children": [
-          "IPY_MODEL_ce41fc61f86e454e92a69f44acb3cbcf"
+          "IPY_MODEL_33ac5de6a05c4f279212b1093c1dc874"
         ],
         "fov": 30.0,
         "position": [
@@ -620,7 +620,7 @@
         ]
       }
     },
-    "ce41fc61f86e454e92a69f44acb3cbcf": {
+    "33ac5de6a05c4f279212b1093c1dc874": {
       "model_name": "DirectionalLightModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -653,12 +653,12 @@
         ]
       }
     },
-    "a79a31a635c34b1f857bea0f387ac928": {
+    "6ce3dc38024843c28902a89c35f5a27c": {
       "model_name": "OrbitControlsModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
-        "controlling": "IPY_MODEL_289e2f6a2a654e578f6859780dc8647e",
+        "controlling": "IPY_MODEL_2f181a5aa1dc42b0a3eaec853d111a25",
         "target": [
           194.3000030517578,
           188.8000030517578,
@@ -670,23 +670,23 @@
         "minAzimuthAngle": "-inf"
       }
     },
-    "a4dc07cb14674e7a94335311172f805d": {
+    "d99c790b33e4432ab5f2b10f3775bc98": {
       "model_name": "LayoutModel",
       "model_module": "@jupyter-widgets/base",
       "model_module_version": "1.2.0",
       "state": {}
     },
-    "bc0e95073f514bceab7e4f346a7f5589": {
+    "a96bf662b4bd426788dcd04f75a94d0b": {
       "model_name": "SceneModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "children": [
-          "IPY_MODEL_289e2f6a2a654e578f6859780dc8647e",
-          "IPY_MODEL_06e33111a4da45c184cee76b1dde953f",
-          "IPY_MODEL_6243750c47f745c587462fdffa7fb57e",
-          "IPY_MODEL_e150b6492a6449a685579877a20f9560",
-          "IPY_MODEL_fa36e5c016654a22afac74e91c156da4"
+          "IPY_MODEL_2f181a5aa1dc42b0a3eaec853d111a25",
+          "IPY_MODEL_ea5b120d34f449768906dc9a0a569e74",
+          "IPY_MODEL_864aba3bcd224304b4542a70b44aadd3",
+          "IPY_MODEL_38ada6ee40904fb8bc1338fbe4e530cd",
+          "IPY_MODEL_7659e517361f469496b9082164961e5e"
         ],
         "fog": null,
         "overrideMaterial": null,
@@ -708,7 +708,7 @@
         ]
       }
     },
-    "06e33111a4da45c184cee76b1dde953f": {
+    "ea5b120d34f449768906dc9a0a569e74": {
       "model_name": "AmbientLightModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -733,16 +733,16 @@
         ]
       }
     },
-    "6243750c47f745c587462fdffa7fb57e": {
+    "864aba3bcd224304b4542a70b44aadd3": {
       "model_name": "MeshModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "children": [
-          "IPY_MODEL_b5be214b4ab046f08bf8c0baae6f9b3e"
+          "IPY_MODEL_42ded6f8cfe7479f9f6d287687ee2b86"
         ],
-        "geometry": "IPY_MODEL_6731e44a1f2843e18cc2a782f9843a3e",
-        "material": "IPY_MODEL_684127ae297444539d9795a8b49dfd9d",
+        "geometry": "IPY_MODEL_5fb769300d6d4bf1a4cd93292dc44641",
+        "material": "IPY_MODEL_f93e9013d49343ddb1f41863a6243e7c",
         "morphTargetInfluences": [],
         "quaternion": [
           0.0,
@@ -762,14 +762,14 @@
         ]
       }
     },
-    "b5be214b4ab046f08bf8c0baae6f9b3e": {
+    "42ded6f8cfe7479f9f6d287687ee2b86": {
       "model_name": "LineSegmentsModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "children": [],
-        "geometry": "IPY_MODEL_f3b9a9414dca439b9d167ad2b096ac73",
-        "material": "IPY_MODEL_6d3fca1b885f440b871dbabdd41e0084",
+        "geometry": "IPY_MODEL_91eab17d010e4597ad25f7f945ee28be",
+        "material": "IPY_MODEL_89781c46e0d246afb8bb5cb7f6899c46",
         "quaternion": [
           0.0,
           0.0,
@@ -788,31 +788,31 @@
         ]
       }
     },
-    "f3b9a9414dca439b9d167ad2b096ac73": {
+    "91eab17d010e4597ad25f7f945ee28be": {
       "model_name": "WireframeGeometryModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
-        "geometry": "IPY_MODEL_6731e44a1f2843e18cc2a782f9843a3e"
+        "geometry": "IPY_MODEL_5fb769300d6d4bf1a4cd93292dc44641"
       }
     },
-    "6731e44a1f2843e18cc2a782f9843a3e": {
+    "5fb769300d6d4bf1a4cd93292dc44641": {
       "model_name": "BufferGeometryModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "_ref_geometry": null,
         "attributes": {
-          "color": "IPY_MODEL_77a524b724b84128a4b5ed7f754de86d",
-          "index": "IPY_MODEL_97ed711c9cad45e99357391c774fe62d",
-          "position": "IPY_MODEL_86fbef441711437791a2f2e0a0f62f9e"
+          "color": "IPY_MODEL_b2478386cac34bc0b2d7db7e2e06d839",
+          "index": "IPY_MODEL_76b375ec4af9446fad361c57c675f94f",
+          "position": "IPY_MODEL_d47f5171e78b4b29bba643637539b77b"
         },
         "index": null,
         "morphAttributes": {},
         "userData": {}
       }
     },
-    "77a524b724b84128a4b5ed7f754de86d": {
+    "b2478386cac34bc0b2d7db7e2e06d839": {
       "model_name": "BufferAttributeModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -837,7 +837,7 @@
         }
       ]
     },
-    "97ed711c9cad45e99357391c774fe62d": {
+    "76b375ec4af9446fad361c57c675f94f": {
       "model_name": "BufferAttributeModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -860,7 +860,7 @@
         }
       ]
     },
-    "86fbef441711437791a2f2e0a0f62f9e": {
+    "d47f5171e78b4b29bba643637539b77b": {
       "model_name": "BufferAttributeModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -884,7 +884,7 @@
         }
       ]
     },
-    "6d3fca1b885f440b871dbabdd41e0084": {
+    "89781c46e0d246afb8bb5cb7f6899c46": {
       "model_name": "LineBasicMaterialModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -895,7 +895,7 @@
         "linewidth": 0.03
       }
     },
-    "684127ae297444539d9795a8b49dfd9d": {
+    "f93e9013d49343ddb1f41863a6243e7c": {
       "model_name": "MeshStandardMaterialModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -928,14 +928,14 @@
         "vertexColors": "VertexColors"
       }
     },
-    "e150b6492a6449a685579877a20f9560": {
+    "38ada6ee40904fb8bc1338fbe4e530cd": {
       "model_name": "PointsModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "children": [],
-        "geometry": "IPY_MODEL_3b7b5f65aef8480cb14bd3445e2d9882",
-        "material": "IPY_MODEL_cbf78ad992a54f93ae868ad3b5510384",
+        "geometry": "IPY_MODEL_f5df5015520a4ea78852e3306de54135",
+        "material": "IPY_MODEL_808c690f8825448d9145fe018684ffbd",
         "quaternion": [
           0.0,
           0.0,
@@ -954,21 +954,21 @@
         ]
       }
     },
-    "3b7b5f65aef8480cb14bd3445e2d9882": {
+    "f5df5015520a4ea78852e3306de54135": {
       "model_name": "BufferGeometryModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "_ref_geometry": null,
         "attributes": {
-          "position": "IPY_MODEL_73e09e5141cf4c5d91f43ad583f01e9e"
+          "position": "IPY_MODEL_1cd2dc4df0834afc9ca813aa7e20028e"
         },
         "index": null,
         "morphAttributes": {},
         "userData": {}
       }
     },
-    "73e09e5141cf4c5d91f43ad583f01e9e": {
+    "1cd2dc4df0834afc9ca813aa7e20028e": {
       "model_name": "BufferAttributeModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -992,7 +992,7 @@
         }
       ]
     },
-    "cbf78ad992a54f93ae868ad3b5510384": {
+    "808c690f8825448d9145fe018684ffbd": {
       "model_name": "PointsMaterialModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -1004,14 +1004,14 @@
         "size": 2.0
       }
     },
-    "fa36e5c016654a22afac74e91c156da4": {
+    "7659e517361f469496b9082164961e5e": {
       "model_name": "PointsModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "children": [],
-        "geometry": "IPY_MODEL_6cb7b59403954f0a86573654a195e236",
-        "material": "IPY_MODEL_74ac79f00f1f49e7acc824d9436e5855",
+        "geometry": "IPY_MODEL_e23f661cf9f245f09b9a5c7204c670d5",
+        "material": "IPY_MODEL_43ea7a17fb064a80972b63d73b2ccd88",
         "quaternion": [
           0.0,
           0.0,
@@ -1030,21 +1030,21 @@
         ]
       }
     },
-    "6cb7b59403954f0a86573654a195e236": {
+    "e23f661cf9f245f09b9a5c7204c670d5": {
       "model_name": "BufferGeometryModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "_ref_geometry": null,
         "attributes": {
-          "position": "IPY_MODEL_37c8a560362c4292977b2e2ac78e1377"
+          "position": "IPY_MODEL_2a97232ea50c48cc97990b7fc379a67d"
         },
         "index": null,
         "morphAttributes": {},
         "userData": {}
       }
     },
-    "37c8a560362c4292977b2e2ac78e1377": {
+    "2a97232ea50c48cc97990b7fc379a67d": {
       "model_name": "BufferAttributeModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -1068,7 +1068,7 @@
         }
       ]
     },
-    "74ac79f00f1f49e7acc824d9436e5855": {
+    "43ea7a17fb064a80972b63d73b2ccd88": {
       "model_name": "PointsMaterialModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -1080,7 +1080,7 @@
         "size": 2.0
       }
     },
-    "596e2a2209cc42a8a256fcaa4ac9a465": {
+    "e66445f4d58f488a85e7008bfdff1de6": {
       "model_name": "WebGLShadowMapModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -1091,7 +1091,7 @@
 </script>
 
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "2cd7b78a24d14c74aa7b63d29f4f0b1a"}
+{"version_major": 2, "version_minor": 0, "model_id": "25e4d86fcdd2402bb2cd58d9f902865d"}
 </script>
 
 <h2 id="sidesets-for-boundary-conditions">Sidesets for Boundary Conditions<a class="headerlink" href="#sidesets-for-boundary-conditions" title="Permanent link">&para;</a></h2>
@@ -1103,9 +1103,9 @@
 <span class="n">sp</span><span class="p">,</span> <span class="n">sl</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">solver</span><span class="o">.</span><span class="n">get_boundary_sidesets</span><span class="p">()</span>
 </pre></div>
 
-<div class="codehilite"><pre><span></span><span class="o">[</span><span class="n">2019-07-25 10:25:47.278</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="n">Loading</span><span class="w"> </span><span class="n">mesh</span><span class="p">...</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.278</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="n">mesh</span><span class="w"> </span><span class="n">bb</span><span class="w"> </span><span class="nf">min</span><span class="w"> </span><span class="o">[</span><span class="n">0, 0</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="nf">max</span><span class="w"> </span><span class="o">[</span><span class="n">1, 0.5</span><span class="o">]</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.278</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w">  </span><span class="n">took</span><span class="w"> </span><span class="mf">5.8583e-05</span><span class="n">s</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><span class="o">[</span><span class="n">2019-07-25 14:06:24.843</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="n">Loading</span><span class="w"> </span><span class="n">mesh</span><span class="p">...</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.843</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="n">mesh</span><span class="w"> </span><span class="n">bb</span><span class="w"> </span><span class="nf">min</span><span class="w"> </span><span class="o">[</span><span class="n">0, 0</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="nf">max</span><span class="w"> </span><span class="o">[</span><span class="n">1, 0.5</span><span class="o">]</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.843</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w">  </span><span class="n">took</span><span class="w"> </span><span class="mf">6.6839e-05</span><span class="n">s</span><span class="w"></span>
 </pre></div>
 
 
@@ -1130,7 +1130,7 @@
   "version_major": 2,
   "version_minor": 0,
   "state": {
-    "80c82f991979499c9e923edc67d8c010": {
+    "78b8444250ab44c4a1504dfbbd252963": {
       "model_name": "RendererModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -1139,23 +1139,23 @@
         "_dom_classes": [],
         "_height": 600,
         "_width": 600,
-        "camera": "IPY_MODEL_1beac6eb06a144dc8f05b646c8a2d301",
+        "camera": "IPY_MODEL_dd3240b4948e4cdab445a9a5acb892ce",
         "clippingPlanes": [],
         "controls": [
-          "IPY_MODEL_10505f18b07f4bc1b7f4a884d1f80b0e"
+          "IPY_MODEL_036052b605454f488e61d712ded28c78"
         ],
-        "layout": "IPY_MODEL_24a4ee46a83647d7be5c961d098e249f",
-        "scene": "IPY_MODEL_bf366ba8b9a44953a43649b8e9c81d31",
-        "shadowMap": "IPY_MODEL_feb0b4dba0b1493a85a84d6ce6720fc1"
+        "layout": "IPY_MODEL_db72dda3c01a436690c1040290bf8542",
+        "scene": "IPY_MODEL_05973dcc9a5349e286cd93570429a017",
+        "shadowMap": "IPY_MODEL_f19f1c1f1d6742349fb982a1c2a30add"
       }
     },
-    "1beac6eb06a144dc8f05b646c8a2d301": {
+    "dd3240b4948e4cdab445a9a5acb892ce": {
       "model_name": "PerspectiveCameraModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "children": [
-          "IPY_MODEL_98671d1818bc40898ff5ecd09987dfaa"
+          "IPY_MODEL_0dd9738915484bc694be8ad052362bce"
         ],
         "fov": 30.0,
         "position": [
@@ -1181,7 +1181,7 @@
         ]
       }
     },
-    "98671d1818bc40898ff5ecd09987dfaa": {
+    "0dd9738915484bc694be8ad052362bce": {
       "model_name": "DirectionalLightModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -1214,12 +1214,12 @@
         ]
       }
     },
-    "10505f18b07f4bc1b7f4a884d1f80b0e": {
+    "036052b605454f488e61d712ded28c78": {
       "model_name": "OrbitControlsModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
-        "controlling": "IPY_MODEL_1beac6eb06a144dc8f05b646c8a2d301",
+        "controlling": "IPY_MODEL_dd3240b4948e4cdab445a9a5acb892ce",
         "target": [
           0.5,
           0.25,
@@ -1231,26 +1231,26 @@
         "minAzimuthAngle": "-inf"
       }
     },
-    "24a4ee46a83647d7be5c961d098e249f": {
+    "db72dda3c01a436690c1040290bf8542": {
       "model_name": "LayoutModel",
       "model_module": "@jupyter-widgets/base",
       "model_module_version": "1.2.0",
       "state": {}
     },
-    "bf366ba8b9a44953a43649b8e9c81d31": {
+    "05973dcc9a5349e286cd93570429a017": {
       "model_name": "SceneModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "children": [
-          "IPY_MODEL_1beac6eb06a144dc8f05b646c8a2d301",
-          "IPY_MODEL_fd7c5750d7c24d2caadfd70da1af4858",
-          "IPY_MODEL_b95d997c18ac4e479ad9c6204a68e32c",
-          "IPY_MODEL_3afaf6bbe1c74ef38af93122a8c17347",
-          "IPY_MODEL_0562733a44c847f1a585b23dad6c732a",
-          "IPY_MODEL_8762a9dd5c0c4155adaddfb522864f07",
-          "IPY_MODEL_3fd62e5447cd418786012bee186a6335",
-          "IPY_MODEL_ea2dc1ef80444cc28ac3825423c3e254"
+          "IPY_MODEL_dd3240b4948e4cdab445a9a5acb892ce",
+          "IPY_MODEL_808917c480bd47738bf0fa91c29421f9",
+          "IPY_MODEL_4c51b4d98bc14bbf82cff6e79cb44009",
+          "IPY_MODEL_89a7354d2b0f46db8f5566a3d21c1c00",
+          "IPY_MODEL_37d89fea2d094ad49ace76e87f027bab",
+          "IPY_MODEL_4ea1c796c15b4bc9944d8d2835916699",
+          "IPY_MODEL_c71e0ae5393b48c392c27e7b02855741",
+          "IPY_MODEL_5b4db539aa334988a32a378a06904bd8"
         ],
         "fog": null,
         "overrideMaterial": null,
@@ -1272,7 +1272,7 @@
         ]
       }
     },
-    "fd7c5750d7c24d2caadfd70da1af4858": {
+    "808917c480bd47738bf0fa91c29421f9": {
       "model_name": "AmbientLightModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -1297,16 +1297,16 @@
         ]
       }
     },
-    "b95d997c18ac4e479ad9c6204a68e32c": {
+    "4c51b4d98bc14bbf82cff6e79cb44009": {
       "model_name": "MeshModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "children": [
-          "IPY_MODEL_dec2df66c5b74455b0c0920fa4e874f9"
+          "IPY_MODEL_769f5f634a1f4711a285321a6cd2680e"
         ],
-        "geometry": "IPY_MODEL_5bab67f618e049b39a09589f1cab614a",
-        "material": "IPY_MODEL_1f330e1a17e844dbabe46edd163ffaf6",
+        "geometry": "IPY_MODEL_6608e918e145453fb0687d33f33278ef",
+        "material": "IPY_MODEL_bac68a5764354657addf9b551619319b",
         "morphTargetInfluences": [],
         "quaternion": [
           0.0,
@@ -1326,14 +1326,14 @@
         ]
       }
     },
-    "dec2df66c5b74455b0c0920fa4e874f9": {
+    "769f5f634a1f4711a285321a6cd2680e": {
       "model_name": "LineSegmentsModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "children": [],
-        "geometry": "IPY_MODEL_832e605cccef4df0b426c676bdaef6d5",
-        "material": "IPY_MODEL_460bab788995437fa3bd4cd82b3f1226",
+        "geometry": "IPY_MODEL_34935de7193b49489c5cbca74ee426b6",
+        "material": "IPY_MODEL_c3362ce18267471793a8c78c7958f1d7",
         "quaternion": [
           0.0,
           0.0,
@@ -1352,31 +1352,31 @@
         ]
       }
     },
-    "832e605cccef4df0b426c676bdaef6d5": {
+    "34935de7193b49489c5cbca74ee426b6": {
       "model_name": "WireframeGeometryModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
-        "geometry": "IPY_MODEL_5bab67f618e049b39a09589f1cab614a"
+        "geometry": "IPY_MODEL_6608e918e145453fb0687d33f33278ef"
       }
     },
-    "5bab67f618e049b39a09589f1cab614a": {
+    "6608e918e145453fb0687d33f33278ef": {
       "model_name": "BufferGeometryModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "_ref_geometry": null,
         "attributes": {
-          "color": "IPY_MODEL_040d17774c2a4db2b91ef5a7d15bee4a",
-          "index": "IPY_MODEL_9639453e287c4544ba8bf78f6edc5629",
-          "position": "IPY_MODEL_bec97e38cd0042c8a514ff67e2d7176a"
+          "color": "IPY_MODEL_7488e6b40d2841f5945e3dc8e95b1361",
+          "index": "IPY_MODEL_c4b2e2b7b0d0416db3a4f99436da913b",
+          "position": "IPY_MODEL_53d9992e9bf54508a0890fd0585df5dd"
         },
         "index": null,
         "morphAttributes": {},
         "userData": {}
       }
     },
-    "040d17774c2a4db2b91ef5a7d15bee4a": {
+    "7488e6b40d2841f5945e3dc8e95b1361": {
       "model_name": "BufferAttributeModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -1401,7 +1401,7 @@
         }
       ]
     },
-    "9639453e287c4544ba8bf78f6edc5629": {
+    "c4b2e2b7b0d0416db3a4f99436da913b": {
       "model_name": "BufferAttributeModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -1424,7 +1424,7 @@
         }
       ]
     },
-    "bec97e38cd0042c8a514ff67e2d7176a": {
+    "53d9992e9bf54508a0890fd0585df5dd": {
       "model_name": "BufferAttributeModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -1448,7 +1448,7 @@
         }
       ]
     },
-    "460bab788995437fa3bd4cd82b3f1226": {
+    "c3362ce18267471793a8c78c7958f1d7": {
       "model_name": "LineBasicMaterialModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -1459,7 +1459,7 @@
         "linewidth": 0.03
       }
     },
-    "1f330e1a17e844dbabe46edd163ffaf6": {
+    "bac68a5764354657addf9b551619319b": {
       "model_name": "MeshStandardMaterialModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -1492,14 +1492,14 @@
         "vertexColors": "VertexColors"
       }
     },
-    "3afaf6bbe1c74ef38af93122a8c17347": {
+    "89a7354d2b0f46db8f5566a3d21c1c00": {
       "model_name": "LineSegmentsModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "children": [],
-        "geometry": "IPY_MODEL_09e82a3eec60475cb9900f2a1a01fd94",
-        "material": "IPY_MODEL_78c3c9366e694f02a9e7b7c924b79988",
+        "geometry": "IPY_MODEL_1c363a697ee4428da9cd985e1019135a",
+        "material": "IPY_MODEL_66b1bc168fc94efaaf56a096af94b88b",
         "quaternion": [
           0.0,
           0.0,
@@ -1518,21 +1518,21 @@
         ]
       }
     },
-    "09e82a3eec60475cb9900f2a1a01fd94": {
+    "1c363a697ee4428da9cd985e1019135a": {
       "model_name": "BufferGeometryModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "_ref_geometry": null,
         "attributes": {
-          "position": "IPY_MODEL_26b98b71ffbf4ad3875a62a78f15848f"
+          "position": "IPY_MODEL_9dfc655ba5114a969ad60706d1ed53dc"
         },
         "index": null,
         "morphAttributes": {},
         "userData": {}
       }
     },
-    "26b98b71ffbf4ad3875a62a78f15848f": {
+    "9dfc655ba5114a969ad60706d1ed53dc": {
       "model_name": "BufferAttributeModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -1556,7 +1556,7 @@
         }
       ]
     },
-    "78c3c9366e694f02a9e7b7c924b79988": {
+    "66b1bc168fc94efaaf56a096af94b88b": {
       "model_name": "LineBasicMaterialModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -1566,14 +1566,14 @@
         "defines": null
       }
     },
-    "0562733a44c847f1a585b23dad6c732a": {
+    "37d89fea2d094ad49ace76e87f027bab": {
       "model_name": "PointsModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "children": [],
-        "geometry": "IPY_MODEL_4a7c8494c4574c7b8b08dae37afe50d5",
-        "material": "IPY_MODEL_5ec90a66a920494d83b7f953d90ebd02",
+        "geometry": "IPY_MODEL_d328a5f1183040aaa8fb8c274d7af1b4",
+        "material": "IPY_MODEL_e1d126a013a84172a12b0a9886ec13e2",
         "quaternion": [
           0.0,
           0.0,
@@ -1592,21 +1592,21 @@
         ]
       }
     },
-    "4a7c8494c4574c7b8b08dae37afe50d5": {
+    "d328a5f1183040aaa8fb8c274d7af1b4": {
       "model_name": "BufferGeometryModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "_ref_geometry": null,
         "attributes": {
-          "position": "IPY_MODEL_5f37bcb742f2466c9d16209ad4186fe7"
+          "position": "IPY_MODEL_190d67d82abe4909a7bc5532c9d5b898"
         },
         "index": null,
         "morphAttributes": {},
         "userData": {}
       }
     },
-    "5f37bcb742f2466c9d16209ad4186fe7": {
+    "190d67d82abe4909a7bc5532c9d5b898": {
       "model_name": "BufferAttributeModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -1630,7 +1630,7 @@
         }
       ]
     },
-    "5ec90a66a920494d83b7f953d90ebd02": {
+    "e1d126a013a84172a12b0a9886ec13e2": {
       "model_name": "PointsMaterialModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -1642,14 +1642,14 @@
         "size": 0.1
       }
     },
-    "8762a9dd5c0c4155adaddfb522864f07": {
+    "4ea1c796c15b4bc9944d8d2835916699": {
       "model_name": "PointsModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "children": [],
-        "geometry": "IPY_MODEL_9206613823364e0a98a00c7c8f35e782",
-        "material": "IPY_MODEL_588495fff9cb4876836dcd60393b29c6",
+        "geometry": "IPY_MODEL_6effa4ec46f14ed38eab039f953a26ce",
+        "material": "IPY_MODEL_34f8f4ee66d14293b1bb32103ad995be",
         "quaternion": [
           0.0,
           0.0,
@@ -1668,21 +1668,21 @@
         ]
       }
     },
-    "9206613823364e0a98a00c7c8f35e782": {
+    "6effa4ec46f14ed38eab039f953a26ce": {
       "model_name": "BufferGeometryModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "_ref_geometry": null,
         "attributes": {
-          "position": "IPY_MODEL_ccc781254b5b4bc2a4f3eb1666b39ff5"
+          "position": "IPY_MODEL_767f27b7d1084da59ff0e59e33baeea2"
         },
         "index": null,
         "morphAttributes": {},
         "userData": {}
       }
     },
-    "ccc781254b5b4bc2a4f3eb1666b39ff5": {
+    "767f27b7d1084da59ff0e59e33baeea2": {
       "model_name": "BufferAttributeModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -1706,7 +1706,7 @@
         }
       ]
     },
-    "588495fff9cb4876836dcd60393b29c6": {
+    "34f8f4ee66d14293b1bb32103ad995be": {
       "model_name": "PointsMaterialModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -1718,14 +1718,14 @@
         "size": 0.1
       }
     },
-    "3fd62e5447cd418786012bee186a6335": {
+    "c71e0ae5393b48c392c27e7b02855741": {
       "model_name": "PointsModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "children": [],
-        "geometry": "IPY_MODEL_43bcad91d1ed4bf28d09be6921560613",
-        "material": "IPY_MODEL_bd48369be6574d9791dc8611efb8e6fc",
+        "geometry": "IPY_MODEL_31a87a95fc10404ea97b36be29bc77f7",
+        "material": "IPY_MODEL_dd1184a871a34141b76d3727ab7b5a6b",
         "quaternion": [
           0.0,
           0.0,
@@ -1744,21 +1744,21 @@
         ]
       }
     },
-    "43bcad91d1ed4bf28d09be6921560613": {
+    "31a87a95fc10404ea97b36be29bc77f7": {
       "model_name": "BufferGeometryModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "_ref_geometry": null,
         "attributes": {
-          "position": "IPY_MODEL_fc0a984d1dff4383b492cc7749521991"
+          "position": "IPY_MODEL_671e52070593420185f69f8ac5654c57"
         },
         "index": null,
         "morphAttributes": {},
         "userData": {}
       }
     },
-    "fc0a984d1dff4383b492cc7749521991": {
+    "671e52070593420185f69f8ac5654c57": {
       "model_name": "BufferAttributeModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -1782,7 +1782,7 @@
         }
       ]
     },
-    "bd48369be6574d9791dc8611efb8e6fc": {
+    "dd1184a871a34141b76d3727ab7b5a6b": {
       "model_name": "PointsMaterialModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -1794,14 +1794,14 @@
         "size": 0.1
       }
     },
-    "ea2dc1ef80444cc28ac3825423c3e254": {
+    "5b4db539aa334988a32a378a06904bd8": {
       "model_name": "PointsModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "children": [],
-        "geometry": "IPY_MODEL_6c0f110977894377829189739a51ac17",
-        "material": "IPY_MODEL_a6ea8f8ae8d242bebb98f7e320b7c27a",
+        "geometry": "IPY_MODEL_4bde48f60de446e8bf962cabd5cd375f",
+        "material": "IPY_MODEL_00caaffc4dcf4bdf954e2d50b4c4fdb0",
         "quaternion": [
           0.0,
           0.0,
@@ -1820,21 +1820,21 @@
         ]
       }
     },
-    "6c0f110977894377829189739a51ac17": {
+    "4bde48f60de446e8bf962cabd5cd375f": {
       "model_name": "BufferGeometryModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "_ref_geometry": null,
         "attributes": {
-          "position": "IPY_MODEL_dfe763b45fc74a3ca95d0293481dbd7a"
+          "position": "IPY_MODEL_cc1d9771340640c29fc32ab4ed8b2a2f"
         },
         "index": null,
         "morphAttributes": {},
         "userData": {}
       }
     },
-    "dfe763b45fc74a3ca95d0293481dbd7a": {
+    "cc1d9771340640c29fc32ab4ed8b2a2f": {
       "model_name": "BufferAttributeModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -1858,7 +1858,7 @@
         }
       ]
     },
-    "a6ea8f8ae8d242bebb98f7e320b7c27a": {
+    "00caaffc4dcf4bdf954e2d50b4c4fdb0": {
       "model_name": "PointsMaterialModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -1870,7 +1870,7 @@
         "size": 0.1
       }
     },
-    "feb0b4dba0b1493a85a84d6ce6720fc1": {
+    "f19f1c1f1d6742349fb982a1c2a30add": {
       "model_name": "WebGLShadowMapModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -1881,7 +1881,7 @@
 </script>
 
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "80c82f991979499c9e923edc67d8c010"}
+{"version_major": 2, "version_minor": 0, "model_id": "78b8444250ab44c4a1504dfbbd252963"}
 </script>
 
 <h2 id="problem-and-settings-setup">Problem and Settings Setup<a class="headerlink" href="#problem-and-settings-setup" title="Permanent link">&para;</a></h2>
@@ -1907,35 +1907,35 @@
 <span class="n">solver</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
 </pre></div>
 
-<div class="codehilite"><pre><span></span><span class="o">[</span><span class="n">2019-07-25 10:25:47.405</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">simplex_count</span><span class="p">:</span><span class="w">   </span><span class="mi">314</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.405</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">regular_count</span><span class="p">:</span><span class="w">   </span><span class="mi">0</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.405</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">regular_boundary_count</span><span class="p">:</span><span class="w">  </span><span class="mi">0</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.405</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">simple_singular_count</span><span class="p">:</span><span class="w">   </span><span class="mi">0</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.405</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">multi_singular_count</span><span class="p">:</span><span class="w">    </span><span class="mi">0</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.405</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">boundary_count</span><span class="p">:</span><span class="w">  </span><span class="mi">0</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.405</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">multi_singular_boundary_count</span><span class="p">:</span><span class="w">   </span><span class="mi">0</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.405</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">non_regular_count</span><span class="p">:</span><span class="w">   </span><span class="mi">0</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.405</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">non_regular_boundary_count</span><span class="p">:</span><span class="w">  </span><span class="mi">0</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.405</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">undefined_count</span><span class="p">:</span><span class="w">     </span><span class="mi">0</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.405</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="nf">count</span><span class="err">:</span><span class="w">  </span><span class="mi">314</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.405</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="n">Building</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">isoparametric</span><span class="w"> </span><span class="n">basis</span><span class="p">...</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.406</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="n">Computing</span><span class="w"> </span><span class="n">polygonal</span><span class="w"> </span><span class="n">basis</span><span class="p">...</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.406</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w">  </span><span class="n">took</span><span class="w"> </span><span class="mf">8.545e-06</span><span class="n">s</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.406</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">hmin</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0341246</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.406</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">hmax</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0904418</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.406</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">havg</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0597291</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.406</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w">  </span><span class="n">took</span><span class="w"> </span><span class="mf">0.00106523</span><span class="n">s</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.406</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="n">flipped</span><span class="w"> </span><span class="n">elements</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.406</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">h</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0904418</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.406</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="nl">bases</span><span class="p">:</span><span class="w"> </span><span class="mi">679</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.406</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="n">pressure</span><span class="w"> </span><span class="nl">bases</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.406</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="n">Assigning</span><span class="w"> </span><span class="n">rhs</span><span class="p">...</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.407</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w">  </span><span class="n">took</span><span class="w"> </span><span class="mf">0.00113303</span><span class="n">s</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.407</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="n">Assembling</span><span class="w"> </span><span class="n">stiffness</span><span class="w"> </span><span class="n">mat</span><span class="p">...</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.407</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w">  </span><span class="n">took</span><span class="w"> </span><span class="mf">6.255e-06</span><span class="n">s</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.407</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">sparsity</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.407</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="n">Solving</span><span class="w"> </span><span class="n">NeoHookean</span><span class="w"> </span><span class="k">with</span><span class="w"></span>
-<span class="o">[</span><span class="n">2019-07-25 10:25:47.407</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">t</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="nl">prev</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nl">step</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><span class="o">[</span><span class="n">2019-07-25 14:06:24.977</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">simplex_count</span><span class="p">:</span><span class="w">   </span><span class="mi">314</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.977</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">regular_count</span><span class="p">:</span><span class="w">   </span><span class="mi">0</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.977</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">regular_boundary_count</span><span class="p">:</span><span class="w">  </span><span class="mi">0</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.977</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">simple_singular_count</span><span class="p">:</span><span class="w">   </span><span class="mi">0</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.977</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">multi_singular_count</span><span class="p">:</span><span class="w">    </span><span class="mi">0</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.977</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">boundary_count</span><span class="p">:</span><span class="w">  </span><span class="mi">0</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.977</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">multi_singular_boundary_count</span><span class="p">:</span><span class="w">   </span><span class="mi">0</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.977</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">non_regular_count</span><span class="p">:</span><span class="w">   </span><span class="mi">0</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.977</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">non_regular_boundary_count</span><span class="p">:</span><span class="w">  </span><span class="mi">0</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.977</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">undefined_count</span><span class="p">:</span><span class="w">     </span><span class="mi">0</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.977</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="nf">count</span><span class="err">:</span><span class="w">  </span><span class="mi">314</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.977</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="n">Building</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">isoparametric</span><span class="w"> </span><span class="n">basis</span><span class="p">...</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.979</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="n">Computing</span><span class="w"> </span><span class="n">polygonal</span><span class="w"> </span><span class="n">basis</span><span class="p">...</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.979</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w">  </span><span class="n">took</span><span class="w"> </span><span class="mf">0.000318941</span><span class="n">s</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.979</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">hmin</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0341246</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.979</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">hmax</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0904418</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.979</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">havg</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0597291</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.979</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w">  </span><span class="n">took</span><span class="w"> </span><span class="mf">0.00170788</span><span class="n">s</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.979</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="n">flipped</span><span class="w"> </span><span class="n">elements</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.979</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">h</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0904418</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.979</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="nl">bases</span><span class="p">:</span><span class="w"> </span><span class="mi">679</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.979</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="n">pressure</span><span class="w"> </span><span class="nl">bases</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.979</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="n">Assigning</span><span class="w"> </span><span class="n">rhs</span><span class="p">...</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.982</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w">  </span><span class="n">took</span><span class="w"> </span><span class="mf">0.00288714</span><span class="n">s</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.982</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="n">Assembling</span><span class="w"> </span><span class="n">stiffness</span><span class="w"> </span><span class="n">mat</span><span class="p">...</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.982</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w">  </span><span class="n">took</span><span class="w"> </span><span class="mf">6.719e-06</span><span class="n">s</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.982</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">sparsity</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.982</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="n">Solving</span><span class="w"> </span><span class="n">NeoHookean</span><span class="w"> </span><span class="k">with</span><span class="w"></span>
+<span class="o">[</span><span class="n">2019-07-25 14:06:24.983</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">polyfem</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="nl">t</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="nl">prev</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="nl">step</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
 </pre></div>
 
 
@@ -1952,7 +1952,7 @@
   "version_major": 2,
   "version_minor": 0,
   "state": {
-    "846334d2f6464fe0b94da626a39515f0": {
+    "1044bd364c1c4519bc67e11332690482": {
       "model_name": "RendererModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -1961,23 +1961,23 @@
         "_dom_classes": [],
         "_height": 600,
         "_width": 600,
-        "camera": "IPY_MODEL_36f788ea60fa4946ab3d2730d53ae767",
+        "camera": "IPY_MODEL_3dee0a18782e446581b31a395eebf792",
         "clippingPlanes": [],
         "controls": [
-          "IPY_MODEL_d6708f7534994a4383e383c2534cc123"
+          "IPY_MODEL_d17e1da2c91f4b25b0113260d8f8da04"
         ],
-        "layout": "IPY_MODEL_a82bfa35e789461382081e6c9a60524e",
-        "scene": "IPY_MODEL_d84fdd8cb83c4a40bfeeb3338c55ec50",
-        "shadowMap": "IPY_MODEL_3d95a16eb4ed429eb01420165173a3cd"
+        "layout": "IPY_MODEL_3667b0b5eed14e1883dfefe68ad33cda",
+        "scene": "IPY_MODEL_89f46f98476a423eaa12bb50b45bde7c",
+        "shadowMap": "IPY_MODEL_dffc9304793e45da86e8961d2fe9772e"
       }
     },
-    "36f788ea60fa4946ab3d2730d53ae767": {
+    "3dee0a18782e446581b31a395eebf792": {
       "model_name": "PerspectiveCameraModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "children": [
-          "IPY_MODEL_9de8697fb2e246a8b4d4480a4d5335d0"
+          "IPY_MODEL_e360599d15714dffbfcbae674c151d95"
         ],
         "fov": 30.0,
         "position": [
@@ -2003,7 +2003,7 @@
         ]
       }
     },
-    "9de8697fb2e246a8b4d4480a4d5335d0": {
+    "e360599d15714dffbfcbae674c151d95": {
       "model_name": "DirectionalLightModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -2036,12 +2036,12 @@
         ]
       }
     },
-    "d6708f7534994a4383e383c2534cc123": {
+    "d17e1da2c91f4b25b0113260d8f8da04": {
       "model_name": "OrbitControlsModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
-        "controlling": "IPY_MODEL_36f788ea60fa4946ab3d2730d53ae767",
+        "controlling": "IPY_MODEL_3dee0a18782e446581b31a395eebf792",
         "target": [
           0.5002995133399963,
           0.2499750703573227,
@@ -2053,21 +2053,21 @@
         "minAzimuthAngle": "-inf"
       }
     },
-    "a82bfa35e789461382081e6c9a60524e": {
+    "3667b0b5eed14e1883dfefe68ad33cda": {
       "model_name": "LayoutModel",
       "model_module": "@jupyter-widgets/base",
       "model_module_version": "1.2.0",
       "state": {}
     },
-    "d84fdd8cb83c4a40bfeeb3338c55ec50": {
+    "89f46f98476a423eaa12bb50b45bde7c": {
       "model_name": "SceneModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "children": [
-          "IPY_MODEL_36f788ea60fa4946ab3d2730d53ae767",
-          "IPY_MODEL_e20ac7994fee40b8a739e2b63abced94",
-          "IPY_MODEL_7b5b53ce2f3745b0848dcee5cbf761bb"
+          "IPY_MODEL_3dee0a18782e446581b31a395eebf792",
+          "IPY_MODEL_d388718eb75d4c1ab082e789636c7037",
+          "IPY_MODEL_1aa847dd6dcf43a7875e6a523e644c7c"
         ],
         "fog": null,
         "overrideMaterial": null,
@@ -2089,7 +2089,7 @@
         ]
       }
     },
-    "e20ac7994fee40b8a739e2b63abced94": {
+    "d388718eb75d4c1ab082e789636c7037": {
       "model_name": "AmbientLightModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -2114,14 +2114,14 @@
         ]
       }
     },
-    "7b5b53ce2f3745b0848dcee5cbf761bb": {
+    "1aa847dd6dcf43a7875e6a523e644c7c": {
       "model_name": "MeshModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "children": [],
-        "geometry": "IPY_MODEL_77740a9305e14ce5b0ac71c78846b2f7",
-        "material": "IPY_MODEL_ee75bbaa10734f4f8f1885dc165784ca",
+        "geometry": "IPY_MODEL_3ba7a0270cfb433b9523c84ac3db8bd5",
+        "material": "IPY_MODEL_532f3e6b58234a9d8be8d205bd2b481e",
         "morphTargetInfluences": [],
         "quaternion": [
           0.0,
@@ -2141,23 +2141,23 @@
         ]
       }
     },
-    "77740a9305e14ce5b0ac71c78846b2f7": {
+    "3ba7a0270cfb433b9523c84ac3db8bd5": {
       "model_name": "BufferGeometryModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
       "state": {
         "_ref_geometry": null,
         "attributes": {
-          "color": "IPY_MODEL_f238eec3136147499aa20b77d79eda0a",
-          "index": "IPY_MODEL_ff073b601e004180b853b02195c79038",
-          "position": "IPY_MODEL_5bd7d03c15e94be884315085d805bf09"
+          "color": "IPY_MODEL_280569fc83d44bcdb95aa191933abfbf",
+          "index": "IPY_MODEL_393a062b062b4109b567940e41a83320",
+          "position": "IPY_MODEL_de3f4b237da144b997a2e67504dcf784"
         },
         "index": null,
         "morphAttributes": {},
         "userData": {}
       }
     },
-    "f238eec3136147499aa20b77d79eda0a": {
+    "280569fc83d44bcdb95aa191933abfbf": {
       "model_name": "BufferAttributeModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -2183,7 +2183,7 @@
         }
       ]
     },
-    "ff073b601e004180b853b02195c79038": {
+    "393a062b062b4109b567940e41a83320": {
       "model_name": "BufferAttributeModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -2206,7 +2206,7 @@
         }
       ]
     },
-    "5bd7d03c15e94be884315085d805bf09": {
+    "de3f4b237da144b997a2e67504dcf784": {
       "model_name": "BufferAttributeModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -2230,7 +2230,7 @@
         }
       ]
     },
-    "ee75bbaa10734f4f8f1885dc165784ca": {
+    "532f3e6b58234a9d8be8d205bd2b481e": {
       "model_name": "MeshStandardMaterialModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -2263,7 +2263,7 @@
         "vertexColors": "VertexColors"
       }
     },
-    "3d95a16eb4ed429eb01420165173a3cd": {
+    "dffc9304793e45da86e8961d2fe9772e": {
       "model_name": "WebGLShadowMapModel",
       "model_module": "jupyter-threejs",
       "model_module_version": "^2.1.0",
@@ -2274,5 +2274,5 @@
 </script>
 
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "846334d2f6464fe0b94da626a39515f0"}
-</script></article></div></div></main><footer class="md-footer"><div class="md-footer-nav"><nav class="md-footer-nav__inner md-grid"><a href="../polyfem/" title="Polyfem" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev"><div class="md-flex__cell md-flex__cell--shrink"><i class="md-icon md-icon--arrow-back md-footer-nav__button"></i></div><div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span class="md-flex__ellipsis"><span class="md-footer-nav__direction">Previous</span>Polyfem</span></div></a><a href="../All/" title="igl, MeshCAD, Polyfem 3D example" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next"><div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span class="md-flex__ellipsis"><span class="md-footer-nav__direction">Next</span>igl, MeshCAD, Polyfem 3D example</span></div><div class="md-flex__cell md-flex__cell--shrink"><i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i></div></a></nav></div><div class="md-footer-meta md-typeset"><div class="md-footer-meta__inner md-grid"><div class="md-footer-copyright">powered by <a href="https://www.mkdocs.org">MkDocs</a> and <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a></div><div class="md-footer-social"><link rel="stylesheet" href="../assets/fonts/font-awesome.css"> <a href="https://geometryprocessing.github.io/geometric-computing-python/" class="md-footer-social__link fa fa-github"></a> </div></div></div></footer></div><script src="../assets/javascripts/application.b260a35d.js"></script><script>app.initialize({version:"1.0.4",url:{base:".."}})</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script></body></html>
+{"version_major": 2, "version_minor": 0, "model_id": "1044bd364c1c4519bc67e11332690482"}
+</script></article></div></div></main><footer class="md-footer"><div class="md-footer-nav"><nav class="md-footer-nav__inner md-grid"><a href="../polyfem/" title="Polyfem" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev"><div class="md-flex__cell md-flex__cell--shrink"><i class="md-icon md-icon--arrow-back md-footer-nav__button"></i></div><div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span class="md-flex__ellipsis"><span class="md-footer-nav__direction">Previous</span>Polyfem</span></div></a><a href="../All/" title="All together" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next"><div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span class="md-flex__ellipsis"><span class="md-footer-nav__direction">Next</span>All together</span></div><div class="md-flex__cell md-flex__cell--shrink"><i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i></div></a></nav></div><div class="md-footer-meta md-typeset"><div class="md-footer-meta__inner md-grid"><div class="md-footer-copyright">powered by <a href="https://www.mkdocs.org">MkDocs</a> and <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a></div><div class="md-footer-social"><link rel="stylesheet" href="../assets/fonts/font-awesome.css"> <a href="https://geometryprocessing.github.io/geometric-computing-python/" class="md-footer-social__link fa fa-github"></a> </div></div></div></footer></div><script src="../assets/javascripts/application.b260a35d.js"></script><script>app.initialize({version:"1.0.4",url:{base:".."}})</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script></body></html>
