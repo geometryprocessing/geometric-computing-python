@@ -61,5 +61,9 @@ nav:
     - Libigl: igl.md
     - Polyfem: polyfem.md
   - Material:
-    - Polyfem 2D example: Polyfem-2d.ipynb
-    - All together: All.ipynb
+    # - Introduction: todo
+    # - Visualization and Geometry Processing: todo
+    # - CAD and Machine Learning: todo
+    - Meshing and Simulation: Polyfem-2d.ipynb
+    - Ultimate Example: All.ipynb
+    # - Closing Remarks: todo
