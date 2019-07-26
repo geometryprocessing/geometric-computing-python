@@ -2,7 +2,6 @@ site_name: Geometric Computing with Python
 site_url: 'https://geometryprocessing.github.io/geometric-computing-python/'
 repo_name: 'geometryprocessing/geometric-computing-python'
 repo_url: 'https://github.com/geometryprocessing/geometric-computing-python'
-edit_uri: '../https://github.com/geometryprocessing/geometric-computing-python/edit/docs/docs/'
 site_description: "Geometry Computing with Python"
 # strict: true
 docs_dir: 'doc'
