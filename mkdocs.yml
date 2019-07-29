@@ -61,8 +61,8 @@ nav:
     - Polyfem: polyfem.md
   - Material:
     # - Introduction: todo
-    # - Visualization and Geometry Processing: todo
-    # - CAD and Machine Learning: todo
+    - Visualization and Geometry Processing: viz_basic.ipynb
+    - CAD and Machine Learning: cad_ml.ipynb
     - Meshing and Simulation: Polyfem-2d.ipynb
     - Ultimate Example: All.ipynb
     # - Closing Remarks: todo

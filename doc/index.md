@@ -25,14 +25,14 @@ Here you can find more details and examples of the libraries:
 - [Wildmeshing](wildmeshing)
 - [igl](igl.md)
 - [polyfem](polyfem.md)
-- ABC dataset CAD Processing (coming soon)
+- [ABC CAD dataset](https://deep-geometry.github.io/abc-dataset/)
 
 
 And here the final notebooks and slides used in our presentation:
 
 - Introduction
-- Visualization and Geometry Processing
-- CAD and Machine Learning
+- [Geometry Processing and Visualization](viz_basic) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/geometryprocessing/geometric-computing-python/doc?filepath=doc%2Fviz_basic.ipynb)
+- [CAD Processing and Machine Learning](cad_ml) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/geometryprocessing/geometric-computing-python/doc?filepath=doc%2Fcad_ml.ipynb)
 - [Meshing and Simulation](Polyfem-2d) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/geometryprocessing/geometric-computing-python/doc?filepath=doc%2FPolyfem-2d.ipynb)
 - [Ultimate Example](All) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/geometryprocessing/geometric-computing-python/doc?filepath=doc%2FAll.ipynb)
 - Closing Remarks
