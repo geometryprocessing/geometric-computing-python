@@ -54,15 +54,10 @@ extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
 nav:
   - Home: index.md
-  - Libraries:
-    - Meshplot: meshplot.md
-    - Wildmeshing: wildmeshing.md
-    - Libigl: igl.md
-    - Polyfem: polyfem.md
-  - Material:
-    # - Introduction: todo
+  - Course:
+    - Introduction: Intro.pdf
     - Visualization and Geometry Processing: viz_basic.ipynb
-    - CAD and Machine Learning: cad_ml.ipynb
+    # - CAD and Machine Learning: cad_ml.ipynb
     - Meshing and Simulation: Polyfem-2d.ipynb
     - Ultimate Example: All.ipynb
-    # - Closing Remarks: todo
+    - Closing Remarks: concluding.pdf

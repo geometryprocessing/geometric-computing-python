@@ -1,11 +1,11 @@
 channels:
-  - pythonocc
-  - oce
-  - dlr-sc
+  # - pythonocc
+  # - oce
+  # - dlr-sc
   - conda-forge
-  - tpaviot
-  - skoch9
-  - pytorch
+  # - tpaviot
+  # - skoch9
+  # - pytorch
 dependencies:
   - numpy
   - scipy
@@ -13,13 +13,13 @@ dependencies:
   - igl
   - wildmeshing
   - polyfempy
-  - cadmesh
-  - pytorch-cpu
-  - torchvision-cpu
-  - pip
-  - pip:
-    - torch-scatter
-    - torch-sparse
-    - torch-cluster
-    - torch-spline-conv
-    - torch-geometric
+  # - cadmesh
+  # - pytorch-cpu
+  # - torchvision-cpu
+  # - pip
+  # - pip:
+  #   - torch-scatter
+  #   - torch-sparse
+  #   - torch-cluster
+  #   - torch-spline-conv
+  #   - torch-geometric
