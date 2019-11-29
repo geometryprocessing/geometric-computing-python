@@ -34,7 +34,7 @@ The four packages have specific functionalities and own website.
 
 - [Meshplot](https://skoch9.github.io/meshplot/): fast 2d and 3d mesh viewer based on `pythreejs`.
 - [Wildmeshing](https://wildmeshing.github.io/): robust 2d and 3d meshing package ([python documentation](https://wildmeshing.github.io/wildmeshing-notebook/))
-- [igl](https://libigl.github.io/): swiss-army-knife of geometric processing functions ([python documentation](https://geometryprocessing.github.io/libigl-python-bindings/))
+- [igl](https://libigl.github.io/): swiss-army-knife of geometric processing functions ([python documentation](https://libigl.github.io/libigl-python-bindings/))
 - [polyfempy](https://polyfem.github.io/): simple but powerful finite element library ([python documentation](https://polyfem.github.io/python/))
 
 ### Additional Useful Dataset
